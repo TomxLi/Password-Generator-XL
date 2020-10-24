@@ -2,18 +2,19 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
+	//let users to input length of password
 	var PWLength = (prompt("Enter the length of your password(8-128 charactor)"));
 	if (PWLength <= 7 || PWLength >= 129) {
 	  alert("Invalid Input, Please input numeric number of 8-128");
 	  return;
 	}
-
+	//let users choose options for their password
 	var Lowercase = confirm("Including lowercase letters?");
 	var Uppercase = confirm("Including uppercase letters?");
 	var Symbols = confirm("Including special characters?");
 	var Numbers = confirm("Including numbers?");	
 
-	
+	//Main part of how to generate new PW
 	var newCode = '';
 	if (Lowercase) {
 		newCode += 'abcdefghijklmnopqrstuvwxyz';
